@@ -26,9 +26,9 @@ var SDK = {
                 console.log(user.type);
                 SDK.Storage.persist("userId", userId);
                 if (user.type == "student") {
-                    window.location.href = "studerendeView.html";
+                    window.location.href = "../studentOverview.html";
                 } else if(user.type == "teacher") {
-                    window.location.href = "underviserView.html";
+                    window.location.href = "../teacherOverview.html";
                 } else if(user.type == "admin") {
                     window.location.href = "adminView.html";
                 }
