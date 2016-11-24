@@ -1,7 +1,5 @@
-
-$(document).ready(function () {
-
-    var $studentTableBody = $("#studentTableBody");
+$(document).ready(function() {
+    var studentTableBody = $("#studentTableBody");
 
     $.ajax({
         type: 'GET',
@@ -9,27 +7,30 @@ $(document).ready(function () {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (course) {
-            console.log(course);
+            var decrypted = $.parseJSON(SDK.Decrypt(course))
+            /*console.log(decrypted[0].code)*/
 
 
-            course.forEach(function (course) {
 
-                $studentTableBody.append(
+            decrypted.forEach(function (decrypted) {
+
+                studentTableBody.append(
                     "<tr>" +
-                    "<td>" + course.code + "</td>" +
+                    "<td>" + decrypted.code + "</td>" +
                     "<td>" + /*course.reviewAverage*/ +"</td>" +
                     "<td>" + /*button*/ +"</td>" +
                     "</tr>"
-                );
+               );
 
             });
 
         },
-        error: function (course) {
+        error: function () {
             alert('Failed!');
         }
 
 
     })
+})
 
-});
+
