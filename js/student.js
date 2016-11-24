@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     $.ajax({
         type: 'GET',
-        url: SDK.serverURL + "/getCourses/" + "6",
+        url: SDK.serverURL + "/course/" + SDK.Storage.load("userId"),
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (course) {
