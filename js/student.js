@@ -7,17 +7,17 @@ $(document).ready(function () {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (course) {
-            var decrypted = $.parseJSON(SDK.Decrypt(course))
+            var decryptedCourse = $.parseJSON(SDK.Decrypt(course))
             /*console.log(decrypted[0].code)*/
 
 
-            decrypted.forEach(function (decrypted) {
+            decryptedCourse.forEach(function (decryptedCourse) {
 
                 studentTableBody.append(
                     "<tr>" +
-                    "<td>" + decrypted.code + "</td>" +
+                    "<td>" + decryptedCourse.code + "</td>" +
                     "<td>" + /*course.reviewAverage*/ +"</td>" +
-                    "<td>" + /*button*/ +"</td>" +
+                    "<td> <button class='btn btn-default' id='toLecture'>Vis</button> </td>" +
                     "</tr>"
                 );
 
@@ -30,6 +30,7 @@ $(document).ready(function () {
 
 
     })
-})
 
+
+})
 

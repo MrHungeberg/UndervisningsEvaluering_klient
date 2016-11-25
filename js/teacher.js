@@ -17,7 +17,7 @@ $(document).ready(function () {
                     "<tr>" +
                     "<td>" + decrypted.code + "</td>" +
                     "<td>" + /*course.reviewAverage*/ +"</td>" +
-                    "<td>" + /*button*/ +"</td>" +
+                    "<td> <button class='btn btn-default' id='toLecture'>Vis</button> </td>" +
                     "</tr>"
                 );
 
