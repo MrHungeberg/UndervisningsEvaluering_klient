@@ -8,7 +8,7 @@ $(document).ready(function () {
         dataType: "json",
         success: function (course) {
             var decryptedCourse = $.parseJSON(SDK.Decrypt(course))
-            /*console.log(decrypted[0].code)*/
+            console.log(decryptedCourse)
 
 
             decryptedCourse.forEach(function (decryptedCourse) {
@@ -17,7 +17,7 @@ $(document).ready(function () {
                     "<tr>" +
                     "<td>" + decryptedCourse.code + "</td>" +
                     "<td>" + /*course.reviewAverage*/ +"</td>" +
-                    "<td> <button class='btn btn-default' id='toLecture'>Vis</button> </td>" +
+                    "<td> <button class='btn btn-default toLecture' data-lectureCode=" + decryptedCourse.displaytext + ">Vis</button> </td>" +
                     "</tr>"
                 );
 
