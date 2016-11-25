@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     var studentTableBody = $("#studentTableBody");
 
     $.ajax({
@@ -11,7 +11,6 @@ $(document).ready(function() {
             /*console.log(decrypted[0].code)*/
 
 
-
             decrypted.forEach(function (decrypted) {
 
                 studentTableBody.append(
@@ -20,7 +19,7 @@ $(document).ready(function() {
                     "<td>" + /*course.reviewAverage*/ +"</td>" +
                     "<td>" + /*button*/ +"</td>" +
                     "</tr>"
-               );
+                );
 
             });
 
