@@ -8,7 +8,7 @@ $(document).ready(function () {
         dataType: "json",
         success: function (course) {
             var decryptedCourse = $.parseJSON(SDK.Decrypt(course))
-            console.log(decryptedCourse)
+            //console.log(decryptedCourse)
 
 
             decryptedCourse.forEach(function (decryptedCourse) {
@@ -17,11 +17,12 @@ $(document).ready(function () {
                     "<tr>" +
                     "<td>" + decryptedCourse.code + "</td>" +
                     "<td>" + /*course.reviewAverage*/ +"</td>" +
-                    "<td> <button class='btn btn-default toLecture' data-lectureCode=" + decryptedCourse.displaytext + ">Vis</button> </td>" +
+                    "<td> <button class='btn btn-default toLecture' data-lectureCode=" + decryptedCourse.displaytext + ", onclick=(SDK.Storage.persist('lectureId',getAttribute('data-lectureCode'))),window.location.href='studentLectureView.html'>Vis</button> </td>" +
                     "</tr>"
                 );
 
             });
+
 
         },
         error: function () {
@@ -30,7 +31,6 @@ $(document).ready(function () {
 
 
     })
-
 
 })
 

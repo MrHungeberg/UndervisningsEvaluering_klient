@@ -17,7 +17,7 @@ $(document).ready(function () {
                     "<tr>" +
                     "<td>" + decryptedCourse.code + "</td>" +
                     "<td>" + /*course.reviewAverage*/ +"</td>" +
-                    "<td> <button class='btn btn-default toComment' data-lectureCode=" + decryptedCourse.displaytext + ">Vis</button> </td>" +
+                    "<td> <button class='btn btn-default toComment' data-lectureCode=" + decryptedCourse.displaytext + ">Vis</button></td>" +
                     "</tr>"
                 );
 
@@ -26,8 +26,11 @@ $(document).ready(function () {
         },
         error: function () {
             alert('Failed!');
-        }
+        },
+
 
 
     })
+
+
 })
