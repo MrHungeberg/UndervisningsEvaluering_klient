@@ -46,7 +46,7 @@ var SDK = {
             window.localStorage.setItem(this.prefix + key, (typeof value === 'object') ? JSON.stringify(value) : value)
         },
         load: function (key) {
-            var val = window.localStorage.getItem(this.prefix + key);
+            var val = window.localStorage.getItem(this.prefix + key).replace(",","");
             try {
                 return JSON.parse(val);
             }

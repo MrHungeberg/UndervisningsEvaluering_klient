@@ -17,7 +17,7 @@ $(document).ready(function () {
                     "<tr>" +
                     "<td>" + decryptedCourse.code + "</td>" +
                     "<td>" + /*course.reviewAverage*/ +"</td>" +
-                    "<td> <button class='btn btn-default toComment' data-lectureCode=" + decryptedCourse.displaytext + ">Vis</button></td>" +
+                    "<td> <button class='btn btn-default toLecture' data-lectureCode=" + decryptedCourse.displaytext + ", onclick=(SDK.Storage.persist('lectureId',getAttribute('data-lectureCode'))),window.location.href='teacherLectureView.html'>Vis</button></td>" +
                     "</tr>"
                 );
 
