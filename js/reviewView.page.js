@@ -7,7 +7,7 @@ $(document).ready(function () {
         dataType: "json",
         success: function (review) {
             var decryptedReview = $.parseJSON(SDK.Decrypt(review))
-            console.log(decryptedReview)
+            //console.log(decryptedReview)
 
 
             decryptedReview.forEach(function (decryptedReview) {
@@ -23,7 +23,7 @@ $(document).ready(function () {
 
         },
         error: function () {
-            alert('Failed!');
+            alert('Der er ingen kommentarer til denne forelæsning!');
         }
 
     })

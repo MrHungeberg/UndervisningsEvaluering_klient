@@ -16,7 +16,7 @@ $(document).ready(function () {
                 studentTableBody.append(
                     "<tr>" +
                     "<td>" + decryptedCourse.code + "</td>" +
-                    "<td> <button class='btn btn-default toLecture' data-lectureCode=" + decryptedCourse.displaytext + ", onclick=(SDK.Storage.persist('lectureCode',getAttribute('data-lectureCode'))),window.location.href='studentLectureView.html'>Vis</button> </td>" +
+                    "<td> <button class='btn btn-primary btn-block toLecture' data-lectureCode=" + decryptedCourse.displaytext + ", onclick=(SDK.Storage.persist('lectureCode',getAttribute('data-lectureCode'))),window.location.href='studentLectureView.html'>Vis</button> </td>" +
                     "</tr>"
                 );
 
