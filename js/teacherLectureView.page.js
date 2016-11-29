@@ -15,9 +15,8 @@ $(document).ready(function () {
 
                 teacherLectureTableBody.append(
                     "<tr>" +
-                    "<td>" + decryptedLecture.start + "</td>" +
-                    "<td>" + /*Se kommentarer*/ + "</td>" +
-                    "<td>" + /*Tilføj bedømmelse og kommentar*/ + "</td>" +
+                    "<td>" + decryptedLecture.startDate + "</td>" +
+                    "<td> <button class='btn btn-default toComment' data-lectureId=" + decryptedLecture.id + ", onclick=(SDK.Storage.persist('lectureId',getAttribute('data-lectureId'))),window.location.href='ReviewView.html'>Vis</button> </td>" +
                     "</tr>"
                 );
 

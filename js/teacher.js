@@ -16,7 +16,6 @@ $(document).ready(function () {
                 teacherTableBody.append(
                     "<tr>" +
                     "<td>" + decryptedCourse.code + "</td>" +
-                    "<td>" + /*course.reviewAverage*/ +"</td>" +
                     "<td> <button class='btn btn-default toLecture' data-lectureCode=" + decryptedCourse.displaytext + ", onclick=(SDK.Storage.persist('lectureId',getAttribute('data-lectureCode'))),window.location.href='teacherLectureView.html'>Vis</button></td>" +
                     "</tr>"
                 );
