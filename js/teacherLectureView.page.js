@@ -3,12 +3,10 @@ $(document).ready(function () {
 
     $.ajax({
         type: 'GET',
-        url: SDK.serverURL + "/lecture/" + SDK.Storage.load("lectureId"),
-        contentType: "application/json; charset=utf-8",
+        url: SDK.serverURL + "/lecture/" + SDK.Storage.load("lectureCode"),
         dataType: "json",
         success: function (lecture) {
             var decryptedLecture = $.parseJSON(SDK.Decrypt(lecture))
-            console.log(decryptedLecture)
 
 
             decryptedLecture.forEach(function (decryptedLecture) {
