@@ -59,6 +59,8 @@ var SDK = {
         },
     },
 
+
+    //Nedenstående funktion er efter mange overvejelser fundet på https://scotch.io/tutorials/how-to-encode-and-decode-strings-with-base64-in-javascript
     Decrypt: function (string) {
         var Base64 = {
             _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
