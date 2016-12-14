@@ -14,7 +14,7 @@
     <ul class="nav nav-tabs">
         <li role="presentation" class="active"><a href="#">Studerende</a></li>
         <li role="presentation"><a href="studentOverview.html">Oversigt</a></li>
-        <li role="presentation"><a href="index.html">Log ud</a></li>
+        <li role="presentation" id="logoutButton" onclick="SDK.Storage.remove('userId'), SDK.Storage.remove('lectureId'), SDK.Storage.remove('lectureCode')"><a href="index.html">Log ud</a></li>
     </ul>
 
     <div class="page-header">
